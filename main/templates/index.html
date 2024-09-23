@@ -1,0 +1,72 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'tailwind.css' %}" />
+  <script src="https://js.stripe.com/v3/buy-button.js" async></script>
+</head>
+<div class="w-screen h-screen">
+  <div class="flex justify-center pt-10 flex-col">
+    <div class="flex flex-col items-center gap-2">
+      <h1 class="text-[#319795] p-2">Google Keyword Tool</h1>
+      <h6 class="text-gray-600">
+        Generate keyword ideas for a dollar a day, 1 search per minute.
+      </h6>
+      <div>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1PnPncRs9UmlsGpeq91TaHK9"
+          publishable-key="pk_test_51PnPkGRs9UmlsGpef456k4Uow7yIk6dTtFfA4yzinm9S3Vk8ZK53TydbYh39qol7Yr7mmf7yjYDL1PRQtzhGvMMB00XtXiWYE2"
+        >
+        </stripe-buy-button>
+      </div>
+    </div>
+    <div class="flex w-1/2 justify-center self-center mt-2 gap-2">
+      <input placeholder="buy health products online" size="lg" />
+      <input placeholder="New York" size="lg" />
+      <button disabled>Generate</button>
+    </div>
+    <div class="w-1/2 self-center mt-5">
+      <table>
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Volume</th>
+            <th>Competition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>buy health products online</td>
+            <td>10</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>online vitamins and supplements</td>
+            <td>10</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+        <tr>
+          <td>buy probiotics online</td>
+          <td>10</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>buy health foods online</td>
+          <td>10</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>online vitamins supplements</td>
+          <td>10</td>
+          <td>3</td>
+        </tr>
+      </table>
+    </div>
+    <div class="absolute bottom-5 right-5 flex gap-2 text-gray-600 font-[500]">
+      <span class="text-xs">SUPPORT</span>
+      <div class="flex items-center gap-1">
+        <span>email icon</span>
+        <span class="text-xs"> rv.work.1994@gmail.com </span>
+      </div>
+    </div>
+  </div>
+</div>
